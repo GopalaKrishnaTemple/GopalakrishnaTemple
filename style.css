@@ -1,0 +1,844 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+ /* Preloader Styles */
+ #preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #412647;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#preloader img {
+    width: 500px;
+    animation: fadeOut 2.5s ease-in-out infinite;
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Navbar Styling */
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Ensure it's above other content */
+    width: 100%; /* Ensure it spans the entire width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect to the sticky header */
+    transition: background-color 0.3s ease; /* Optional: smooth transition when sticky */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.elem ul {
+    list-style: none;
+    display: flex;
+}
+
+.elem ul li {
+    margin-left: 20px;
+}
+
+.elem ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.elem ul li:hover{
+    border-bottom: 2px solid #6a3a6e;
+}
+
+header .mob-elem{
+    display: none;
+}
+
+.nav-contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-contact button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-contact button {
+    background-color: #6a3a6e;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.nav-contact button a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+
+}
+
+.nav-contact button:hover{
+    background-color: #945497;
+}
+
+/* Mobile Menu (Hamburger) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+.hero-sec {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as per your design */
+}
+
+.hero-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind the content */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+    z-index: 2; /* Place the overlay above the image */
+}
+
+.hero-cont {
+    width: 100%;
+    position: absolute;
+    top: 20%; /* Adjust to position the text from the bottom */
+    left: 0; /* Adjust for left positioning */
+    z-index: 3; /* Place the text above the overlay */
+    color: white; /* Make text color white for contrast */
+}
+
+.hero-sec .hero-cont h2{
+    font-size: 50px; /* Adjust font size as per design */
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-cont p{
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.about{
+    padding: 20px;
+    margin-top: 5rem;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 30px;
+    color: #6a3a6e;
+    font-weight: bold;
+}
+
+.about-cont{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+}
+
+.about-cont p{
+    font-size: 16px;
+}
+
+.about-cont .temp-img{
+    display: flex;justify-content: space-around;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+.temp-img .img1{
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.temp-img .img2{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+    border-radius: 20px;
+
+}
+
+.temp-cont{
+    max-width: 600px;
+}
+
+.about-cont .temp-cont p{
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.about-cont .temp-cont button{
+    margin-top: 3rem;
+    padding: 20px 40px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #6a3a6e;
+    color: white;
+    cursor: pointer;
+}
+
+.about-cont .temp-cont button:hover{
+    background-color: #945497;
+}
+
+.container .service {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+    padding: 20px;
+    width: 100%;
+    height: 100%; /* Use 100vh for full screen height */
+    background-image: url('./assets/5874528_34464.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative; /* To position the overlay */
+}
+
+.service .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 7, 71, 0.555); /* Dim the background */
+    z-index: 1; /* Keep overlay below the text and cards */
+}
+
+.service .cards .card .card-body p {
+    position: relative; /* Ensure the text stays above the overlay */
+    z-index: 2; /* Make sure text is above the overlay */
+    padding: 20px; /* Add padding to space out the text from edges */
+    font-size: 18px; /* Adjust font size as needed */
+    max-width: 90%; /* Optional: Limit the width of the text */
+    margin: 0 auto; /* Optional: Center the text */
+}
+
+.service .ser-head {
+    color: white;
+    z-index: 2;
+    font-size: 50px;
+    position: relative;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+.service .cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Add space between cards */
+    padding: 20px;
+}
+
+.cards .card {
+    padding: 10px;
+    background-color: #f6f4f7;
+    color: rgb(0, 0, 0);
+    width: 300px; /* Set a fixed width for the cards */
+    height: 350px; /* Set a fixed height for the cards */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.cards .card .card-icon i {
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(231, 134, 23);
+}
+
+.cards .card .card-header {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.service .cards .card .card-body p {
+    font-size: 16px;
+    color: rgba(15, 15, 15, 0.8); /* Lighter text color */
+    margin: 0;
+    line-height: 1.4;
+}
+
+.cards .card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.cards .card .card-btn {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.cards .card .card-btn a button {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #6a3a6e; /* Button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust based on your design */
+    background-image: url('https://vrindavan.com/wp-content/uploads/2022/10/prem-mandir-vrindavan-scaled.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    margin-top: 5rem;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(126, 19, 19, 0.671); /* Dim the background */
+    z-index: 1; /* Overlay is above the background but below content */
+}
+
+.contact-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    z-index: 2; /* Content is above the overlay */
+    color: white;
+}
+
+.contact-left {
+    flex: 1;
+    padding: 1rem; /* Optional: Slight dark background for better readability */
+    border-radius: 8px;
+}
+
+.contact-left h2 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contact-info .info-item {
+    margin-bottom: 1rem;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.contact-right {
+    flex: 1;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: slight white background */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-right iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.puja-time{
+    margin-top: 5rem;
+}
+
+.puja-time h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding: 10px;
+    color: #6a3a6e;
+}
+
+.puja-time .cards{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.puja-time .cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Add space between cards */
+    padding: 20px;
+}
+.puja-time .cards .card .card-body p {
+    font-size: 16px;
+    color: rgba(15, 15, 15, 0.8);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.puja-time .cards .card {
+    position: relative; /* Ensure the card has a stacking context */
+    background-color: transparent; /* Remove any existing background color */
+    border-top: 4px solid #6a3a6e;
+}
+
+.puja-time .cards .card::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: -30rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/pngwing.com.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Adjust opacity of the background image */
+    z-index: -1; /* Ensure it is placed behind the card content */
+}
+
+.donate{
+    display: none;
+}
+
+/* General Footer Styles */
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 200px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-links ul li {
+    margin-left: 20px;
+  }
+  
+  .footer-links ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .seva-list{
+    margin-top: 3rem;
+  }
+  .seva-list h2{
+    text-align: center;
+    color: rgb(202, 66, 66);
+    font-size: 30px;
+  }
+
+  .seva-list .cards{
+    display: grid;
+    grid-template-columns: repeat( 4, minmax(250px, 1fr) );
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 20px;
+  }
+
+  .seva-list .cards .card{
+    height: 300px; /* Set a fixed height for the cards */
+    margin-bottom: 2rem;
+    /* box-shadow: none; */
+    border-top: 4px solid #6a3a6e;
+    position: relative; /* Ensure the card has a stacking context */
+    background-color: transparent; /* Remove any existing background color */
+    margin: 5px auto;
+  }
+  
+  .container .seva-list .cards .card::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -30rem;
+    background-image: url('./assets/pngwing.com.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Adjust opacity of the background image */
+    z-index: -1; /* Ensure it is placed behind the card content */
+}
+
+.donation{
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+    margin-top: 3rem;
+}
+  
+.container .donation .dt{
+    font-size: 40px;
+    color: rgb(202, 66, 66);
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+
+
+  /* Responsive Styles for Mobile */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links ul li {
+      margin: 10px 0;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .temp-img .img2{
+        /* width: 300px;
+        height: auto;
+        position: absolute; */
+        top: 12rem;
+        left: 2rem;
+        border-radius: 20px;
+    
+    }
+    .footer-logo img {
+      width: 200px;
+    }
+  
+    .footer-bottom p {
+      font-size: 10px;
+    }
+  }
+  
+
+
+
+
+
+
+
+/* For devices with a max-width of 768px */
+@media screen and (max-width: 768px) {
+    #preloader img {
+        width: 350px;
+    }
+    .elem ul {
+        display: none;
+        list-style-type: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .elem ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .mob-elem ul{
+        display: block;
+        list-style-type: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        
+    }
+
+    /* Show .mob-elem when 'active' class is added */
+    header .mob-elem.active {
+    display: block;
+    /* Optionally, add animations or transitions */
+    transition: max-height 0.3s ease;
+}
+
+    header .mob-elem ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header .mob-elem ul li a{
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        background-color: #6a3a6e;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+    .elem ul.active {
+        display: flex;
+    }
+
+    .nav-contact button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container .hero-sec img{
+        width: 100%;
+        height: 100svh;
+    }
+    .container .hero-sec .hero-overlay{
+        width: 100%;
+        height: 100svh;
+    }
+
+    .container .hero-sec h2{
+        font-size: 3rem;
+    }
+
+    .about .about-cont{
+        flex-direction: column;
+    }
+
+    .temp-img .img2{
+        /* width: 300px;
+        height: auto;
+        position: absolute; */
+        top: 12rem;
+        left: 2.5rem;
+        border-radius: 20px;
+    
+    }
+
+    .temp-cont{
+        margin-top: 10rem;
+        text-align: justify;
+    }
+
+    .temp-cont button{
+        width: 100%;
+        font-size: 16px;
+        margin: 5px auto;
+    }
+
+    .container .service{
+        margin-top: 5rem;
+        flex-direction: column;
+    }
+    .service .ser-head {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .service .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .puja-time .cards{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact{
+        position: relative;
+        height: 100%;
+    }
+    
+    .contact .contact-content{
+        flex-direction: column;
+    }
+
+    .donate{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 4rem;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .container .donate h4{
+        font-size: 18px;
+        color: #6a3a6e;
+    }
+    .container .donate h2{
+        font-size: 30px;
+        color: rgba(187, 48, 48, 0.836);
+        font-weight: bold;
+    }
+    .donate .donate-btn a button{
+        background-color: #6a3a6e;
+        padding: 20px 20px;
+        outline:none;
+        border: none;
+        color: white;
+        margin-top: 1rem;
+        border-radius: 30px;
+    }
+
+    .seva-list .cards{
+        grid-template-columns: repeat( 1, minmax(250px, 1fr) );
+        justify-content: center;
+
+    }
+    .container .donation .dt{
+        font-size: 30px;
+    }
+}

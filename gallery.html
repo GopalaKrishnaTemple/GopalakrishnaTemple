@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- add favicon -->
+     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
+    <style>
+
+        .container h2{
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 1rem;
+            color: #6a3a6e;
+        }
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container {
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+     <!-- Preloader -->
+     <div id="preloader">
+        <img src="./assets/VIshnugopalaLogoWhite.png" alt="Loading...">
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo">
+            </div>
+            <div class="elem">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="./seva.html">Seva List</a></li>
+                    <li><a href="">committee</a></li>
+                    <li><a href="">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-contact">
+                <button><a href=""><i class="fa-solid fa-phone"></i> contact</a></button>
+                <button><a href="">Donate Now</a></button>
+            </div>
+        </nav>
+        <div class="mob-elem">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="./seva.html">Seva List</a></li>
+                <li><a href="">committee</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+    <h2>TEMPLE PHOTOS</h2>
+    <section class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHA0lK6yv7OMW1yOjWZBNAZ9wsKqmp1zPSLg&s" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHA0lK6yv7OMW1yOjWZBNAZ9wsKqmp1zPSLg&s" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.holidify.com/images/attr_square/2774.jpg" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2021/03/Popular-Temples-in-India.jpg" alt="Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHA0lK6yv7OMW1yOjWZBNAZ9wsKqmp1zPSLg&s" alt="Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2021/03/Popular-Temples-in-India.jpg" alt="Image 6">
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" class="logo">
+      </div>
+      
+      <!-- Links Section -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#services">Seva List</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Social Media Icons Section -->
+    <div class="social-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-square-x-twitter"></i>
+    </div>
+    
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 All Rights Reserved. Developed by Anshu Shetty CEC</p>
+    </div>
+  </footer>
+</body>
+<script>
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.mob-elem');
+    
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+<script>
+    window.addEventListener("load", function() {
+        document.getElementById("preloader").style.display = "none";
+    });
+</script>
+</html>

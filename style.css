@@ -942,3 +942,19 @@ a {
 a:focus, button:focus {
     outline: none;
 }
+
+.puja-note {
+    font-size: 1rem; /* Optimal readability */
+    color: #000000; /* Elegant brown shade */
+    font-weight: 500; /* Medium weight for better visibility */
+    background: rgba(255, 243, 205, 0.8); /* Soft golden background */
+    padding: 8px 15px; /* Adds space inside the box */
+    border-radius: 5px; /* Rounded corners for a smooth look */
+    text-align: center; /* Centers the text inside the box */
+    margin: 15px auto; /* Centers the box horizontally */
+    display: block; /* Ensures full control over width */
+    width: fit-content; /* Keeps the box width minimal */
+    border: 1px solid #d6ba82; /* Soft border for structure */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+}
+

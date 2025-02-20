@@ -933,3 +933,12 @@ footer {
         align-items: center;
     }
 }
+/* Remove blue highlight on mobile */
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove outline when clicking */
+a:focus, button:focus {
+    outline: none;
+}

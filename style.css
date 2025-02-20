@@ -101,6 +101,15 @@ header .mob-elem{
     padding: 5px;
 }
 
+.nav-contact .btn1{
+    background-color: transparent;
+    border: 2px solid #6a3a6e;
+}
+
+.nav-contact .btn1 a{
+    color: #6a3a6e;
+}
+
 .nav-contact button a{
     padding: 10px;
     text-decoration: none;
@@ -243,6 +252,11 @@ header .mob-elem{
     background-color: #6a3a6e;
     color: white;
     cursor: pointer;
+}
+
+.about-cont .temp-cont button a{
+    text-decoration: none;
+    color: white;
 }
 
 .about-cont .temp-cont button:hover{
@@ -615,9 +629,72 @@ footer {
     padding-bottom: 1rem;
 }
 
+.container .about-temple{
+    margin-top: 2rem;
+    border-bottom: 1px solid #6a3a6e;
+}
 
 
+.container .about-temple .temp-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 5rem;
+}
 
+.about-temple .temp-content .right-sec{
+    max-width: 800px;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.about-temple h2{
+    font-size: 30px;
+    color: rgb(202, 66, 66);
+    text-align: center;
+    padding: 20px;
+}
+
+.container .about-temple .left-sec img{
+    /* width: 100%; */
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.container .pandit .pandith-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.pandit .pandith-content .right-sec img{
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.pandith-content .left-sec {
+    max-width: 700px;
+}
+
+.pandit h2{
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(202, 66, 66);
+    text-align: center;
+    margin: 1rem;
+}
+
+.pandit .pandith-content .left-sec{
+    text-align: justify;
+    font-size: 18px;
+    line-height: 28px
+}
 
 
 
@@ -841,5 +918,18 @@ footer {
     }
     .container .donation .dt{
         font-size: 30px;
+    }
+
+    .container .pandit .pandith-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .about-temple .temp-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

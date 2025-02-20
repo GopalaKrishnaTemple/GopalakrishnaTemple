@@ -959,3 +959,54 @@ a:focus, button:focus {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
 }
 
+/* Common Styles for Flex Layout */
+.temp-content, .pandith-content {
+    display: flex;
+    align-items: center; /* Vertically center text and image */
+    justify-content: center; /* Center content horizontally */
+    gap: 20px; /* Adds spacing between text and image */
+    text-align: center; /* Ensures text stays centered */
+    padding: 20px; /* Adds spacing from the edges */
+}
+
+/* Text Section */
+.left-sec {
+    flex: 1; /* Equal width for both sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text horizontally */
+    justify-content: center; /* Centers text vertically */
+    text-align: center; /* Ensures text is aligned properly */
+    padding: 20px; /* Adds spacing around the text */
+    max-width: 600px; /* Prevents text from stretching too much */
+}
+
+/* Image Section */
+.right-sec {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers image */
+}
+
+.right-sec img {
+    max-width: 100%; /* Ensures image is responsive */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .temp-content, .pandith-content {
+        flex-direction: column; /* Stacks text and image on small screens */
+        padding: 10px; /* Adjust padding for small screens */
+    }
+
+    .left-sec, .right-sec {
+        width: 100%; /* Ensures full width */
+        text-align: center; /* Centers text */
+    }
+
+    .right-sec img {
+        max-width: 90%; /* Slightly smaller image for better fit */
+    }
+}

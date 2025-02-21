@@ -106,6 +106,10 @@ header .mob-elem{
     border: 2px solid #6a3a6e;
 }
 
+.nav-contact .btn1:hover{
+    color: white;
+}
+
 .nav-contact .btn1 a{
     color: #6a3a6e;
 }
@@ -165,7 +169,7 @@ header .mob-elem{
 .hero-cont {
     width: 100%;
     position: absolute;
-    top: 20%; /* Adjust to position the text from the bottom */
+    top: 40%; /* Adjust to position the text from the bottom */
     left: 0; /* Adjust for left positioning */
     z-index: 3; /* Place the text above the overlay */
     color: white; /* Make text color white for contrast */
@@ -695,6 +699,29 @@ footer {
     text-align: justify;
     font-size: 18px;
     line-height: 28px
+}
+
+/* Customize the overall scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Horizontal scrollbar height */
+    height: 12px; /* Vertical scrollbar width */
+}
+
+/* Customize the scrollbar track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light gray */
+    border-radius: 10px;
+}
+
+/* Customize the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #6a3a6e; /* Gray thumb */
+    border-radius: 10px;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #412647; /* Darker gray when hovered */
 }
 
 

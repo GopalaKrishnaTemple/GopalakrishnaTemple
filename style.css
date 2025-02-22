@@ -849,6 +849,15 @@ footer {
         height: 100svh;
     }
 
+    .hero-cont {
+        width: 100%;
+        position: absolute;
+        top: 30%; /* Adjust to position the text from the bottom */
+        left: 0; /* Adjust for left positioning */
+        z-index: 3; /* Place the text above the overlay */
+        color: white; /* Make text color white for contrast */
+    }
+
     .container .hero-sec h2{
         font-size: 3rem;
     }
@@ -1024,7 +1033,7 @@ a:focus, button:focus {
 /* Responsive Design for Mobile Screens */
 @media (max-width: 768px) {
     .temp-content, .pandith-content {
-        flex-direction: column; /* Stacks text and image on small screens */
+        flex-direction: column-reverse; /* Stacks text and image on small screens */
         padding: 10px; /* Adjust padding for small screens */
     }
 

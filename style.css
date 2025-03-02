@@ -701,6 +701,49 @@ footer {
     line-height: 28px
 }
 
+
+.jathra{
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.jathra h2{
+    font-size: 30px;
+    color: #6a3a6e;
+    text-align: center;
+    margin: 2rem;
+}
+
+.jathra .jathra-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jathra-cont .right{
+    max-width: 700px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.288);
+    padding: 20px;
+    border-top: 4px solid rgb(202, 66, 66);
+    border-radius:  10px 10px 0 0;
+    font-size: 20px;
+}
+
+.jathra-cont .right .jathra-date{
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+    color: #6a3a6e;
+}
+
+.jathra .jathra-cont .left img{
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    border-radius: 20px;
+}
+
 /* Customize the overall scrollbar */
 ::-webkit-scrollbar {
     width: 12px; /* Horizontal scrollbar height */
@@ -968,6 +1011,15 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .jathra .jathra-cont{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 18px;
     }
 }
 /* Remove blue highlight on mobile */

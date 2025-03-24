@@ -7,9 +7,13 @@
     <title>Temple Events</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- add favicon -->
-     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;700&family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        body {
+            font-family: 'Noto Sans Kannada', 'Baloo Tamma 2', sans-serif;
+        }
 
         .container h2{
             font-size: 30px;
@@ -19,51 +23,82 @@
             color: #6a3a6e;
         }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item iframe {
+            width: 100%;
+            height: 100%;
+            max-height: 300px;
+        }
+        
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu {
+            font-family: 'Noto Sans Kannada', 'Baloo Tamma 2', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .drive-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.gallery-item {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.drive-video {
+    width: 80vw;  /* Adjust the width as necessary */
+    max-width: 800px;  /* Maximum width limit */
+    height: 450px;  /* Adjust height for proper aspect ratio */
+    border: none;
+    border-radius: 10px;  /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: for a subtle shadow effect */
 }
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-
-
-/* @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .gallery-container {
-        padding: 10px;
-    }
-} */
 
     </style>
 </head>
 <body>
-     <!-- Preloader -->
      <div id="preloader">
         <img src="./assets/VIshnugopalaLogoWhite.png" alt="Loading...">
     </div>
@@ -76,9 +111,15 @@
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./seva.html">Seva List</a></li>
-                    <li><a href="./committee.html">committee</a></li>
+                    <li><a href="./committee.html">Committee</a></li>
                     <li><a href="./gallery.html">Gallery</a></li>
-                    <li><a href="">Events</a></li>
+                    <li class="dropdown">
+                        <a href="./event.html">Events</a>
+                        <div class="dropdown-content">
+                            <a href="#bhagavata">ಲೋಕ ಕಲ್ಯಾಣಾರ್ಥವಾಗಿ ಭಾಗವತ ಸಪ್ತಾಹ</a>
+                            <a href="#ratha">ನೂತನ ಬ್ರಹ್ಮರಥ ಸಮರ್ಪಣೆ</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="hamburger-menu">
@@ -88,96 +129,85 @@
                 <div></div>
             </div>
             <div class="nav-contact">
-                <button><a href="./donate.html"><i class="fa-solid fa-phone"></i> contact</a></button>
+                <button><a href="./donate.html"><i class="fa-solid fa-phone"></i> Contact</a></button>
                 <button><a href="./donate.html">Donate Now</a></button>
             </div>
         </nav>
-        <div class="mob-elem">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./seva.html">Seva List</a></li>
-                <li><a href="./committee.html">committee</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./event.html">Events</a></li>
-            </ul>
-        </div>
     </header>
     <div class="container">
         <h2>TEMPLE EVENTS</h2>
-    
-        <!-- Temple Photos Section -->
-       
-        <h2>ಲೋಕ ಕಲ್ಯಾಣಾರ್ಥವಾಗಿ ಭಾಗವತ ಸಪ್ತಾಹ</h2>
+        
+        <h2 id="bhagavata">ಲೋಕ ಕಲ್ಯಾಣಾರ್ಥವಾಗಿ ಭಾಗವತ ಸಪ್ತಾಹ</h2>
+        <section class="gallery-container">
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/f-AQMu7bxPo" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/Rgtlz67JzYg" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/OvGSVvtHXKI" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/naimxFEpisA" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/9bcWl4j7aOU" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/Op_Um9ao2SE" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/jdxbc7ZjqQo" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        
+        
+        <h2 id="ratha">ನೂತನ ಬ್ರಹ್ಮರಥ ಸಮರ್ಪಣೆ</h2>
 <section class="gallery-container">
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/f-AQMu7bxPo" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/Rgtlz67JzYg" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/OvGSVvtHXKI" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/naimxFEpisA" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/9bcWl4j7aOU" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/Op_Um9ao2SE" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-item">
-        <iframe src="https://www.youtube.com/embed/jdxbc7ZjqQo" allowfullscreen></iframe>
+    <div class="gallery-item drive-video-container">
+        <iframe 
+            class="drive-video"
+            src="https://drive.google.com/file/d/1erpOKbZIG1Kf-1jCEgHVs6qnkFJronsm/preview" 
+            allowfullscreen>
+        </iframe>
     </div>
 </section>
 
 
 
 
+
+
     </div>
     
-<footer>
-    <div class="footer-container">
-      <!-- Logo Section -->
-      <div class="footer-logo">
-        <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" class="logo">
-      </div>
-      
-      <!-- Links Section -->
-      <div class="footer-links">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="./seva.html">Seva List</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <!-- Social Media Icons Section -->
-    <div class="social-icons">
-        <a href="./coming-soon.html"><i class="fa-brands fa-instagram"></i></a>
-        <a href="./coming-soon.html"><i class="fa-brands fa-facebook"></i></a>
-        <a href="./coming-soon.html"><i class="fa-brands fa-youtube"></i></a>
-        <a href="./coming-soon.html"><i class="fa-brands fa-square-x-twitter"></i></a>
-    </div>
-    
-    <!-- Copyright Section -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 All Rights Reserved. Developed by 21SOP03 Team</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" class="logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="./seva.html">Seva List</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="./coming-soon.html"><i class="fa-brands fa-instagram"></i></a>
+            <a href="./coming-soon.html"><i class="fa-brands fa-facebook"></i></a>
+            <a href="./coming-soon.html"><i class="fa-brands fa-youtube"></i></a>
+            <a href="./coming-soon.html"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 All Rights Reserved. Developed by 21SOP03 Team</p>
+        </div>
+    </footer>
 </body>
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.mob-elem');
-    
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
 <script>
     window.addEventListener("load", function() {
         document.getElementById("preloader").style.display = "none";

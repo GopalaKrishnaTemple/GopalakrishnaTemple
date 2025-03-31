@@ -101,16 +101,17 @@ header .mob-elem{
     padding: 5px;
 }
 
-.nav-contact .btn1{
+nav .nav-contact .btn1{
     background-color: transparent;
     border: 2px solid #6a3a6e;
 }
 
-.nav-contact .btn1:hover{
+nav .nav-contact .btn1 a:hover{
     color: white;
+    border: none;
 }
 
-.nav-contact .btn1 a{
+nav .nav-contact .btn1 a{
     color: #6a3a6e;
 }
 

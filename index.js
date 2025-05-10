@@ -14,9 +14,24 @@ document.addEventListener('contextmenu', function (e) {
     setInterval(function() {
       if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
         isInspecting = true;
-        alert('Please don’t inspect elements.');
+      
       }
     }, 1000);
   })();
   
-  
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.mob-elem');
+const openIcon = document.querySelector('.open-icon');
+const closeIcon = document.querySelector('.close-icon');
+
+hamburgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  const isActive = navLinks.classList.contains('active');
+  openIcon.style.display = isActive ? 'none' : 'inline';
+  closeIcon.style.display = isActive ? 'inline' : 'none';
+});
+
+      window.addEventListener("load", function() {
+          document.getElementById("preloader").style.display = "none";
+});

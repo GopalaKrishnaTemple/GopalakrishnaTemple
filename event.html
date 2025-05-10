@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;700&family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
-    <script src="./index.js"></script>
     <style>
         body {
     font-family: 'Noto Sans Kannada', 'Baloo Tamma 2', sans-serif;
@@ -144,10 +143,8 @@
                 </ul>
             </div>
             <div class="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <i class="fa-solid fa-bars open-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
             </div>
             <div class="nav-contact">
                 <button><a href="./donate.html"><i class="fa-solid fa-phone"></i> Contact</a></button>
@@ -282,6 +279,7 @@
         </div>
     </footer>
 </body>
+<script src="./index.js"></script>
 <script>
     window.addEventListener("load", function() {
         document.getElementById("preloader").style.display = "none";

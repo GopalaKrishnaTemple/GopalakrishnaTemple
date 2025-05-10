@@ -128,18 +128,40 @@ nav .nav-contact .btn1 a{
 }
 
 /* Mobile Menu (Hamburger) */
+/* General styles */
 .hamburger-menu {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
 }
 
-.hamburger-menu div {
+.hamburger-menu i {
+    background-color: transparent !important;
+    color: #6a3a6e;
+    font-size: 24px;
+    pointer-events: none; /* Prevents accidental clicks on icons themselves */
+}
+
+.hamburger-menu .close-icon {
+    display: none;
+}
+
+/* Remove any unwanted pseudo-elements */
+.hamburger-menu::before,
+.hamburger-menu::after {
+    display: none !important;
+}
+
+/* .hamburger-menu div {
     width: 25px;
     height: 3px;
     background-color: white;
-}
+} */
 
 .hero-sec {
     position: relative;
@@ -822,6 +844,14 @@ footer {
     #preloader img {
         width: 350px;
     }
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mob-elem.active {
+        display: block; /* or flex/grid depending on layout */
+    }
+    
     .elem ul {
         display: none;
         list-style-type: none;

@@ -9,7 +9,6 @@
     <!-- add favicon -->
      <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
      <meta name="google-site-verification" content="7B_Ib0_h1C63QqpKKwH7PDtF8_BKfTFTD0ow-GHfImg" />
-     <script src="./index.js"></script>
 </head>
 <body>
      <!-- Preloader -->
@@ -31,10 +30,8 @@
                 </ul>
             </div>
             <div class="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <i class="fa-solid fa-bars open-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
             </div>
             <div class="nav-contact">
                 <button class="btn1"><a href="./donate.html"><i class="fa-solid fa-phone"></i> contact</a></button>
@@ -263,17 +260,5 @@
     </div>
     
 </body>
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.mob-elem');
-    
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
-<script>
-        window.addEventListener("load", function() {
-            document.getElementById("preloader").style.display = "none";
-        });
-</script>
+<script src="./index.js"></script>
 </html>

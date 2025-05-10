@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- add favicon -->
      <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
-     <script src="./index.js"></script>
     <style>
 
         .container h2{
@@ -83,10 +82,8 @@
                 </ul>
             </div>
             <div class="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <i class="fa-solid fa-bars open-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
             </div>
             <div class="nav-contact">
                 <button class="btn1"><a href="./donate.html"><i class="fa-solid fa-phone"></i> contact</a></button>
@@ -191,17 +188,5 @@
     </div>
   </footer>
 </body>
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.mob-elem');
-    
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
-<script>
-    window.addEventListener("load", function() {
-        document.getElementById("preloader").style.display = "none";
-    });
-</script>
+<script src="./index.js"></script>
 </html>

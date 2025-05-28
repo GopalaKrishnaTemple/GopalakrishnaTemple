@@ -885,7 +885,7 @@ footer {
     }
     .video-container iframe{
         width: 100%;
-        height: 100%;
+        height: 300px;
         border-radius: 20px;
     }
     .bhramakalasha-video .video-container

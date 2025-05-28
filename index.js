@@ -35,3 +35,14 @@ hamburgerMenu.addEventListener('click', () => {
       window.addEventListener("load", function() {
           document.getElementById("preloader").style.display = "none";
 });
+
+
+// Close popup when the X button is clicked
+  document.getElementById('closeImagePopup').onclick = function() {
+    document.getElementById('imagePopup').style.display = 'none';
+  };
+
+  // Show popup on page load
+  window.onload = function() {
+    document.getElementById('imagePopup').style.display = 'flex';
+  };

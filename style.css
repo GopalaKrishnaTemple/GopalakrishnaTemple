@@ -868,17 +868,17 @@ footer {
     align-items: center;     /* Optional: centers vertically if needed */
     }
     .bhramakalasha-video .video-desc a button{
-        background-color: transparent;
-        border: 2px solid #6a3a6e;outline: none;
+        background-color: brown;
+        border: none;outline: none;
         padding: 24px 20px;
-        color: #6a3a6e;
+        color: #ffff;
         border-radius: 50px;
         font-size: 20px;
         cursor: pointer;
     }
 
     .bhramakalasha-video .video-desc a button:hover{
-        background-color: brown;
+        background-color: #512a52;
         color: white;
         border: brown;
     }

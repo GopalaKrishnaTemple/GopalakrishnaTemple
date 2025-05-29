@@ -46,3 +46,9 @@ hamburgerMenu.addEventListener('click', () => {
   window.onload = function() {
     document.getElementById('imagePopup').style.display = 'flex';
   };
+
+  function showSuccess() {
+    document.getElementById('successMessage').style.display = 'block';
+    return true;
+
+  } 

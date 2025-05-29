@@ -859,6 +859,102 @@ footer {
         border-radius: 20px;
     }
 
+        .bhramakalasha-video .video-desc{
+        width: 100%;
+        padding: 20px;
+        margin: 10px auto;
+        display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Optional: centers vertically if needed */
+    }
+    .bhramakalasha-video .video-desc a button{
+        background-color: transparent;
+        border: 2px solid #6a3a6e;outline: none;
+        padding: 24px 20px;
+        color: #6a3a6e;
+        border-radius: 50px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .bhramakalasha-video .video-desc a button:hover{
+        background-color: brown;
+        color: white;
+        border: brown;
+    }
+
+    .contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  /* background: #f8f8f8; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+  margin-top: 4rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 28px;
+  color: #6a3a6e;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 20px 12px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  resize: vertical;
+  background-color: #f6f4f7;
+}
+
+.form-group button {
+  padding: 20px 20px;
+  background-color: #6a3a6e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #512a52;
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  .form-group {
+    flex: 1 1 100%;
+  }
+}
+
+
   /* Responsive Styles for Mobile */
   @media (max-width: 768px) {
 
@@ -1156,7 +1252,7 @@ a:focus, button:focus {
     font-size: 1rem; /* Optimal readability */
     color: white; /* Elegant brown shade */
     font-weight: 500; /* Medium weight for better visibility */
-    background: #6a3a6e; /* Soft golden background */
+    background: brown; /* Soft golden background */
     padding: 20px; /* Adds space inside the box */
     border-radius: 5px; /* Rounded corners for a smooth look */
     text-align: center; /* Centers the text inside the box */

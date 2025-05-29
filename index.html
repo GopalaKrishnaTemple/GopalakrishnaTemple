@@ -34,7 +34,7 @@
                 <i class="fa-solid fa-xmark close-icon"></i>
             </div>
             <div class="nav-contact">
-                <button class="btn1"><a href="./donate.html"><i class="fa-solid fa-phone"></i> contact</a></button>
+                <button class="btn1"><a href="#contact"><i class="fa-solid fa-phone"></i> contact</a></button>
                 <button><a href="./donate.html">Donate Now</a></button>
             </div>
         </nav>
@@ -49,15 +49,15 @@
         </div>
     </header>
 
-    <!-- Image Popup -->
-<div class="image-popup-overlay" id="imagePopup">
-  <div class="image-popup-box">
-    <span class="close-popup" id="closeImagePopup">&times;</span>
-    <img src="./assets/gopalaposter.jpg" alt="Popup Image">
-  </div>
-</div>
-
+    
     <div class="container">
+        <!-- Image Popup -->
+    <div class="image-popup-overlay" id="imagePopup">
+      <div class="image-popup-box">
+        <span class="close-popup" id="closeImagePopup">&times;</span>
+        <img src="./assets/gopalaposter.jpg" alt="Popup Image">
+      </div>
+    </div>
         <div class="hero-sec">
             <img src="./assets/img2.jpg" alt="">
             <div class="hero-overlay"></div>
@@ -127,10 +127,10 @@
         <div class="bhramakalasha-video">
             <h2>ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನಕ್ಕೆ ನವೀಕರಣ ಬ್ರಹ್ಮಕಲಶೋತ್ಸವ</h2>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xXdony3Dy_s?si=3i9veWZp-HDcpiqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQ_2yOcVlrg?si=SM8m9sFTMNgDka6B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="video-desc">
-                
+                <a href=""><button>Watch full video at Bhakthishri Tv <i class="fa-solid fa-play"></i></button></a>
             </div>
         </div>
 
@@ -202,6 +202,40 @@
             </div>
             <p class="puja-note"> <i class="fa-solid fa-exclamation"></i> Pooja timings may vary on festival and special occasions.</p>
         </div>
+
+        <section class="contact-section" id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form" action="https://formspree.io/f/xkgrdawk"
+  method="POST" onsubmit="return showSuccess();">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder=" Eg: jhon@gmail.com" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" />
+    </div>
+
+    <div class="form-group full-width">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message here..." required></textarea>
+    </div>
+
+    <div class="form-group full-width">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div id="successMessage" style="display:none; color: green; margin-top: 10px;">
+  Thank you! Your message has been sent.
+</div>
+</section>
+
 
         <section class="contact">
             <div class="contact-overlay"></div>

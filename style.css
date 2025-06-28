@@ -931,6 +931,11 @@ footer {
   resize: vertical;
   background-color: #f6f4f7;
 }
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid #6a3a6e;
+  border-radius: 10px;
+}
 
 .form-group button {
   padding: 20px 20px;

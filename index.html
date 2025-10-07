@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shri GopalaKrishna Temple|Navoor</title>
+    <title>Shri GopalaKrishna Temple | Navoora</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -45,6 +45,19 @@
           <i class="fa-solid fa-xmark close-icon"></i>
         </div>
         <div class="nav-contact">
+          <div class="lang-selector">
+            <div class="lang-button">
+              <i class="fa-solid fa-globe"></i>
+              ENG
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="lang-dropdown">
+              <a href="#" onclick="changeLanguage('ENG')" id="enBtn">English</a>
+              <a href="#" onclick="changeLanguage('KAN')" id="knBtn"
+                >ಕನ್ನಡ (Kannada)</a
+              >
+            </div>
+          </div>
           <button class="btn1">
             <a href="#contact"><i class="fa-solid fa-phone"></i> contact</a>
           </button>
@@ -74,20 +87,25 @@
         <img src="./assets/img2.jpg" alt="" />
         <div class="hero-overlay"></div>
         <div class="hero-cont">
-          <h2>SHRI GOPALAKRISHNA TEMPLE</h2>
-          <p>Agrahara Beedi Navoor Bantwal-574211</p>
+          <h2 data-key="home.heroTitle">SHRI GOPALAKRISHNA TEMPLE</h2>
+          <p data-key="home.heroSubtitle">
+            Agrahara Beedi Navoor Bantwal-574211
+          </p>
         </div>
       </div>
 
       <div class="about">
-        <h2><i class="fa-solid fa-om"></i> Shri GopalaKrishna Temple</h2>
+        <h2>
+          <i class="fa-solid fa-om"></i>
+          <span data-key="home.aboutTitle"></span>
+        </h2>
         <div class="about-cont">
           <div class="temp-img">
             <img src="./assets/img6.jpg" alt="" class="img1" />
             <img src="./assets/img9.jpg" alt="" class="img2" />
           </div>
           <div class="temp-cont">
-            <p>
+            <p data-key="home.aboutBody">
               Gopalakrishna is a common Indian name, often associated with Lord
               Krishna. It is a blend of "Gopala" (protector of cows) and
               "Krishna" (a Hindu deity). Many poets, scholars, and spiritual
@@ -99,7 +117,8 @@
 
             <button>
               <a href="./about.html"
-                >Read more <i class="fa-solid fa-arrow-right"></i
+                ><span data-key="home.readMore"></span>
+                <i class="fa-solid fa-arrow-right"></i
               ></a>
             </button>
           </div>
@@ -107,33 +126,45 @@
       </div>
 
       <div class="service" id="Services">
-        <h2 class="ser-head">Our Service</h2>
+        <h2 class="ser-head" data-key="home.services.ourService">
+          Our Service
+        </h2>
         <div class="cards">
           <div class="card">
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Our Pandit</div>
+            <div class="card-header">
+              <h4 data-key="home.services.cardTitle_pandit">Our Pandit</h4>
+            </div>
             <div class="card-body">
-              <p>Vedhamurthy Sudharshan Ballal</p>
+              <p data-key="home.services.cardBody_pandit">
+                Vedhamurthy Sudharshan Ballal
+              </p>
             </div>
             <div class="card-btn">
-              <a href="./pandit.html"><button>Read More</button></a>
+              <a href="./pandit.html"
+                ><button data-key="home.readMore">Read More</button></a
+              >
             </div>
           </div>
           <div class="card">
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Our Sevas</div>
+            <div class="card-header" data-key="home.services.cardTitle_sevas">
+              Our Sevas
+            </div>
             <div class="card-body">
-              <p>
+              <p data-key="home.services.cardBody_sevas">
                 We offer a variety of poojas and rituals dedicated to Lord
                 Gopalakrishna, Mukhyaprana, and Somanatheshwara.
               </p>
             </div>
             <div class="card-btn">
-              <a href="./seva.html"><button>Read More</button></a>
+              <a href="./seva.html"
+                ><button data-key="home.readMore">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -141,7 +172,9 @@
       </div>
 
       <div class="bhramakalasha-video">
-        <h2>ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನಕ್ಕೆ ನವೀಕರಣ ಬ್ರಹ್ಮಕಲಶೋತ್ಸವ</h2>
+        <h2 data-key="home.brahmakalasha.title">
+          ಶ್ರೀ ಗೋಪಾಲಕೃಷ್ಣ ದೇವಸ್ಥಾನಕ್ಕೆ ನವೀಕರಣ ಬ್ರಹ್ಮಕಲಶೋತ್ಸವ
+        </h2>
         <div class="video-container">
           <iframe
             width="560"
@@ -157,7 +190,7 @@
         <div class="video-desc">
           <a href=""
             ><button>
-              Watch full video at Bhakthishri Tv
+              <span data-key="home.brahmakalasha.button"></span>
               <i class="fa-solid fa-play"></i></button
           ></a>
         </div>
@@ -401,5 +434,6 @@
       </footer>
     </div>
   </body>
+  <script src="./lang.js"></script>
   <script src="./index.js"></script>
 </html>

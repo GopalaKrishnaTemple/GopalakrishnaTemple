@@ -22,6 +22,24 @@
     "brahmakalasha": {
       "title": "Renovation Brahmakalashotsava at Shri Gopalakrishna Temple",
       "button": "Watch full video at Bhakthishri TV"
+    },
+
+    "pooja": {
+      "title": "Puja Timings",
+      "cardTitle_1": "Morning Puja",
+      "cardTitle_2": "Afternoon Puja",
+      "cardTitle_3": "Evening Puja",
+      "cardDesc": "Starts at",
+      "pujaWar": "Pooja timings may vary on festival and special occasions."
     }
+  },
+  "navbar": {
+    "home": "Home",
+    "sevaList": "Seva List",
+    "committee": "Committee",
+    "gallery": "Gallery",
+    "events": "Events",
+    "contact": "Contact",
+    "donate": "Donate Now"
   }
 }

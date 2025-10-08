@@ -1032,6 +1032,7 @@ footer {
   }
   .hamburger-menu {
     display: flex;
+    flex-direction: row;
   }
 
   .mob-elem.active {
@@ -1050,6 +1051,10 @@ footer {
     margin: 10px 0;
     width: 100%;
     text-align: center;
+  }
+
+  header nav .mob-lang {
+    display: flex;
   }
 
   header .mob-elem ul {
@@ -1117,7 +1122,7 @@ footer {
   }
 
   .container .hero-sec h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .about .about-cont {
@@ -1386,6 +1391,10 @@ button:focus {
 }
 
 /* language css */
+
+.mob-lang {
+  display: none;
+}
 
 .lang-selector {
   position: relative;

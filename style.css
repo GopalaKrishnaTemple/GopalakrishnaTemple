@@ -9,6 +9,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* language css */
+
+header nav .mob-lang {
+  display: none;
+}
+
 /* Preloader Styles */
 #preloader {
   position: fixed;
@@ -1054,7 +1060,7 @@ footer {
   }
 
   header nav .mob-lang {
-    display: flex;
+    display: block;
   }
 
   header .mob-elem ul {
@@ -1388,12 +1394,6 @@ button:focus {
   .gallery-container {
     grid-template-columns: 1fr;
   }
-}
-
-/* language css */
-
-.mob-lang {
-  display: none;
 }
 
 .lang-selector {

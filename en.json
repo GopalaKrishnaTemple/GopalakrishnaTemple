@@ -31,6 +31,20 @@
       "cardTitle_3": "Evening Puja",
       "cardDesc": "Starts at",
       "pujaWar": "Pooja timings may vary on festival and special occasions."
+    },
+    "contactUs": "Contact Us",
+    "name": "Name",
+    "phone": "Phone Number",
+    "message": "Message",
+    "submit": "Submit",
+    "email": "Email",
+
+    "contact_section": {
+      "contactUs": "Contact Us",
+      "location": "Agrahara Beedhi",
+      "road": "Navoor, Bantwal, India",
+      "phone": "Phone",
+      "email": "Email"
     }
   },
   "navbar": {
@@ -41,5 +55,29 @@
     "events": "Events",
     "contact": "Contact",
     "donate": "Donate Now"
+  },
+  "footer": {
+    "about": "About",
+    "services": "Services"
+  },
+
+  "templeSevas": {
+    "title": "TEMPLE SEVA",
+    "karpuraArathi": "Karpura Arathi",
+    "price1": "₹15",
+    "mangalaArathi": "Mangala Arathi",
+    "price2": "₹50",
+    "mahaPuja": "Maha Puja",
+    "price3": "₹50",
+    "ganaHoma": "Gana Homa",
+    "price4": "₹2000",
+    "sandhiShanthi": "Sandhi Shanthi",
+    "price5": "₹5000",
+    "vishnuPuja": "Vishnu Puja",
+    "price6": "₹1000",
+    "afternoonPuja1": "Afternoon Puja",
+    "price7": "₹200",
+    "afternoonPuja2": "Afternoon Puja",
+    "price8": "₹200"
   }
 }

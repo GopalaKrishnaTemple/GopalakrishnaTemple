@@ -31,6 +31,20 @@
       "cardTitle_3": "ಸಂಜೆಯ ಪೂಜೆ",
       "cardDesc": "ಆರಂಭವಾಗುವ ಸಮಯ",
       "pujaWar": "ಹಬ್ಬಗಳು ಮತ್ತು ವಿಶೇಷ ಸಂದರ್ಭಗಳಲ್ಲಿ ಪೂಜೆ ಸಮಯದಲ್ಲಿ ಬದಲಾವಣೆ ಇರಬಹುದು."
+    },
+    "contactUs": "ಸಂಪರ್ಕಿಸಿ",
+    "name": "ಹೆಸರು",
+    "phone": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+    "message": "ಸಂದೇಶ",
+    "submit": "ಸಲ್ಲಿಸು",
+    "email": "ಇಮೇಲ್",
+
+    "contact_section": {
+      "contactUs": "ಸಂಪರ್ಕಿಸಿ",
+      "location": "ಅಗ್ರಹಾರ ಬೀದಿ",
+      "road": "ನವೂರು, ಬಂಟ್ವಾಳ್, ಭಾರತ",
+      "phone": "ದೂರವಾಣಿ",
+      "email": "ಇಮೇಲ್"
     }
   },
 
@@ -42,5 +56,28 @@
     "events": "ಈವೆಂಟ್ಸ್",
     "contact": "ಸಂಪರ್ಕಿಸಿ",
     "donate": "ದೇಣಿಗೆ ನೀಡಿ"
+  },
+  "footer": {
+    "about": "ಬಗ್ಗೆ",
+    "services": "ಸೇವೆಗಳು"
+  },
+  "templeSevas": {
+    "title": "ದೆವಾಲಯ ಸೇವೆ",
+    "karpuraArathi": "ಕರ್ಪೂರ ಆರತಿ",
+    "price1": "₹15",
+    "mangalaArathi": "ಮಂಗಲ ಆರತಿ",
+    "price2": "₹50",
+    "mahaPuja": "ಮಹಾ ಪೂಜೆ",
+    "price3": "₹50",
+    "ganaHoma": "ಗಣ ಹೋಮ",
+    "price4": "₹2000",
+    "sandhiShanthi": "ಸಂಧಿ ಶಾಂತಿ",
+    "price5": "₹5000",
+    "vishnuPuja": "ವಿಷ್ಣು ಪೂಜೆ",
+    "price6": "₹1000",
+    "afternoonPuja1": "ಮಧ್ಯಾಹ್ನ ಪೂಜೆ",
+    "price7": "₹200",
+    "afternoonPuja2": "ಮಧ್ಯಾಹ್ನ ಪೂಜೆ",
+    "price8": "₹200"
   }
 }

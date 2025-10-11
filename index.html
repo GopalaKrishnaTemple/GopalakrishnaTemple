@@ -50,7 +50,7 @@
         </div>
         <div class="lang-selector mob-lang">
           <div class="lang-button">
-            ENG
+            <span id="selectedLang">Eng</span>
             <i class="fa-solid fa-caret-down"></i>
           </div>
           <div class="lang-dropdown">
@@ -316,7 +316,7 @@
       </div>
 
       <section class="contact-section" id="contact">
-        <h2>Contact Us</h2>
+        <h2 data-key="home.contactUs">Contact Us</h2>
         <form
           class="contact-form"
           action="https://formspree.io/f/xkgrdawk"
@@ -324,7 +324,7 @@
           onsubmit="return showSuccess();"
         >
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" data-key="home.name">Name</label>
             <input
               type="text"
               id="name"
@@ -335,7 +335,7 @@
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-key="home.email">Email</label>
             <input
               type="email"
               id="email"
@@ -346,7 +346,7 @@
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone Number</label>
+            <label for="phone" data-key="home.phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
@@ -356,7 +356,7 @@
           </div>
 
           <div class="form-group full-width">
-            <label for="message">Message</label>
+            <label for="message" data-key="home.message">Message</label>
             <textarea
               id="message"
               name="message"
@@ -367,7 +367,7 @@
           </div>
 
           <div class="form-group full-width">
-            <button type="submit">Submit</button>
+            <button type="submit" data-key="home.submit">Submit</button>
           </div>
         </form>
         <div
@@ -383,20 +383,29 @@
         <div class="contact-content">
           <!-- Left Section -->
           <div class="contact-left">
-            <h2>Contact Us</h2>
+            <h2 data-key="home.contact_section.contactUs">Contact Us</h2>
             <div class="contact-info">
               <div class="info-item">
                 <h3>
-                  <i class="fa-solid fa-location-dot"></i> Agrahara Beedhi
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span data-key="home.contact_section.location"></span>
                 </h3>
-                <p>Navoor, Bantwal, India</p>
+                <p data-key="home.contact_section.road">
+                  Navoor, Bantwal, India
+                </p>
               </div>
               <div class="info-item">
-                <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                <h3>
+                  <i class="fa-solid fa-phone"></i>
+                  <span data-key="home.contact_section.phone"></span>
+                </h3>
                 <p>+91 9900254988</p>
               </div>
               <div class="info-item">
-                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <h3>
+                  <i class="fa-solid fa-envelope"></i>
+                  <span data-key="home.contact_section.email"></span>
+                </h3>
                 <p>gopalakrishnatemple00@gmail.com</p>
               </div>
             </div>
@@ -446,11 +455,15 @@
           <!-- Links Section -->
           <div class="footer-links">
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="./seva.html">Seva List</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#home" data-key="navbar.home">Home</a></li>
+              <li><a href="./about.html" data-key="footer.about">About</a></li>
+              <li>
+                <a href="#services" data-key="footer.services">Services</a>
+              </li>
+              <li>
+                <a href="./seva.html" data-key="navbar.sevaList">Seva List</a>
+              </li>
+              <li><a href="#contact" data-key="navbar.contact">Contact</a></li>
             </ul>
           </div>
         </div>

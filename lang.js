@@ -1,25 +1,24 @@
-//translate logic here
+// Map display label to language code
+const langMap = {
+  ENG: "en",
+  KAN: "kn",
+};
 
-// If you're using <a onclick="changeLanguage('KAN')">, map to lang code
-function changeLanguage(displayCode) {
-  const langMap = {
-    ENG: "en",
-    KAN: "kn",
-  };
-  const langCode = langMap[displayCode];
-  if (langCode) {
-    loadLanguage(langCode);
-  }
-}
+// Reverse map for setting label near globe
+const reverseLangMap = {
+  en: "ENG",
+  kn: "KAN",
+};
 
-const buttons = document.querySelectorAll("button");
+// Elements to translate
 const elements = document.querySelectorAll("[data-key]");
 
-// Helper to get nested value from object using dot notation
+// Helper: Get nested translation via dot notation
 function getNestedTranslation(obj, keyPath) {
   return keyPath.split(".").reduce((acc, key) => acc?.[key], obj);
 }
 
+// Load and apply translations
 async function loadLanguage(langCode) {
   try {
     const response = await fetch(`${langCode}.json`);
@@ -28,7 +27,6 @@ async function loadLanguage(langCode) {
     elements.forEach((el) => {
       const key = el.getAttribute("data-key");
       const translation = getNestedTranslation(translations, key);
-
       if (translation) {
         el.textContent = translation;
 
@@ -41,25 +39,21 @@ async function loadLanguage(langCode) {
       }
     });
 
-    // Optional: update globe language label
-    const langMap = {
-      en: "ENG",
-      kn: "KAN",
-    };
-    document.getElementById("selectedLang").textContent =
-      langMap[langCode] || langCode.toUpperCase();
+    // Update language label near globe icon
+    const label = reverseLangMap[langCode] || langCode.toUpperCase();
+    document.getElementById("selectedLang").textContent = label;
   } catch (err) {
     console.error("Error loading translation:", err);
   }
 }
 
-// Language buttons
-document
-  .getElementById("enBtn")
-  ?.addEventListener("click", () => loadLanguage("en"));
-document
-  .getElementById("knBtn")
-  ?.addEventListener("click", () => loadLanguage("kn"));
+// Triggered from dropdown onclick handlers (like in <a onclick="changeLanguage('KAN')">)
+function changeLanguage(displayCode) {
+  const langCode = langMap[displayCode];
+  if (langCode) {
+    loadLanguage(langCode);
+  }
+}
 
-// Load default language
+// Load default language on page load
 loadLanguage("en");

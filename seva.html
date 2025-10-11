@@ -32,11 +32,19 @@
 
         <div class="elem">
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./seva.html">Seva List</a></li>
-            <li><a href="./committee.html">committee</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
-            <li><a href="./event.html">Events</a></li>
+            <li><a href="./index.html" data-key="navbar.home">Home</a></li>
+            <li>
+              <a href="./seva.html" data-key="navbar.sevaList">Seva List</a>
+            </li>
+            <li>
+              <a href="./committee.html" data-key="navbar.committee"
+                >committee</a
+              >
+            </li>
+            <li>
+              <a href="./gallery.html" data-key="navbar.gallery">Gallery</a>
+            </li>
+            <li><a href="./event.html" data-key="navbar.events">Events</a></li>
           </ul>
         </div>
 
@@ -74,10 +82,13 @@
           </div>
           <button class="btn1">
             <a href="./donate.html"
-              ><i class="fa-solid fa-phone"></i> contact</a
-            >
+              ><i class="fa-solid fa-phone"></i>
+              <span data-key="navbar.contact"></span
+            ></a>
           </button>
-          <button><a href="./donate.html">Donate Now</a></button>
+          <button>
+            <a href="./donate.html" data-key="navbar.donate">Donate Now</a>
+          </button>
         </div>
       </nav>
 
@@ -94,13 +105,18 @@
 
     <div class="container">
       <div class="seva-list">
-        <h2><i class="fa-solid fa-gopuram"></i> TEMPLE SEVA</h2>
+        <h2>
+          <i class="fa-solid fa-gopuram"></i>
+          <span data-key="templeSevas.title"></span>
+        </h2>
         <div class="cards">
           <div class="card">
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Karpura Arathi</div>
+            <div class="card-header">
+              <span data-key="templeSevas.karpuraArathi"></span>
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -113,7 +129,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">MangalaArathi</div>
+            <div class="card-header" data-key="templeSevas.mangalaArathi">
+              MangalaArathi
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -126,7 +144,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Maha Puja</div>
+            <div class="card-header" data-key="templeSevas.mahaPuja">
+              Maha Puja
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -139,7 +159,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Gana Homa</div>
+            <div class="card-header" data-key="templeSevas.ganaHoma">
+              Gana Homa
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -152,7 +174,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Sandhi Shanthi</div>
+            <div class="card-header" data-key="templeSevas.sandhiShanthi">
+              Sandhi Shanthi
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -165,7 +189,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Vishnu Puja</div>
+            <div class="card-header" data-key="templeSevas.vishnuPuja">
+              Vishnu Puja
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -178,7 +204,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Afternoon Puja</div>
+            <div class="card-header" data-key="templeSevas.afternoonPuja1">
+              Afternoon Puja
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -191,7 +219,9 @@
             <div class="card-icon">
               <i class="fa-solid fa-om"></i>
             </div>
-            <div class="card-header">Afternoon Puja</div>
+            <div class="card-header" data-key="templeSevas.afternoonPuja2">
+              Afternoon Puja
+            </div>
             <div class="card-body">
               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem.</p> -->
             </div>
@@ -213,11 +243,13 @@
         <!-- Links Section -->
         <div class="footer-links">
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="./seva.html">Seva List</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="./index.html" data-key="navbar.home">Home</a></li>
+            <li><a href="./about.html" data-key="footer.about">About</a></li>
+            <li><a href="#services" data-key="footer.services">Services</a></li>
+            <li>
+              <a href="./seva.html" data-key="navbar.sevaList">Seva List</a>
+            </li>
+            <li><a href="#contact" data-key="navbar.contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -237,7 +269,7 @@
         <p>&copy; 2025 All Rights Reserved. Developed by 21SOP03 Team</p>
       </div>
     </footer>
-
+    <script src="lang.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -24,3 +24,4 @@ Thumbs.db
 
 # Ignore uploads (optional, depends on your use case)
 **/public/uploads/
+**/package-lock.json

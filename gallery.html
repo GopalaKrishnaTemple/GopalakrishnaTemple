@@ -1,192 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Temple Gallery</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <!-- add favicon -->
-     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon.png"
+    />
     <style>
+      .container h2 {
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 1rem;
+        color: #6a3a6e;
+      }
 
-        .container h2{
-            font-size: 30px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 1rem;
-            color: #6a3a6e;
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery-item {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
         }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .gallery-container {
-        padding: 10px;
-    }
-}
-
+        .gallery-container {
+          padding: 10px;
+        }
+      }
     </style>
-</head>
-<body>
-     <!-- Preloader -->
-     <div id="preloader">
-        <img src="./assets/VIshnugopalaLogoWhite.png" alt="Loading...">
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="./assets/VIshnugopalaLogoWhite.png" alt="Loading..." />
     </div>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo">
-            </div>
-            <div class="elem">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./seva.html">Seva List</a></li>
-                    <li><a href="./committee.html">committee</a></li>
-                    <li><a href="./gallery.html">Gallery</a></li>
-                    <li><a href="./event.html">Events</a></li>
-                </ul>
-            </div>
-            <div class="hamburger-menu">
-                <i class="fa-solid fa-bars open-icon"></i>
-                <i class="fa-solid fa-xmark close-icon"></i>
-            </div>
-            <div class="nav-contact">
-                <button class="btn1"><a href="./donate.html"><i class="fa-solid fa-phone"></i> contact</a></button>
-                <button><a href="./donate.html">Donate Now</a></button>
-            </div>
-        </nav>
-        <div class="mob-elem">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./seva.html">Seva List</a></li>
-                <li><a href="./committee.html">committee</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./event.html">Events</a></li>
-            </ul>
+      <nav>
+        <div class="logo">
+          <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" />
         </div>
-    </header>
-    <div class="container">
-        <h2>TEMPLE PHOTOS</h2>
-    
-        <!-- Temple Photos Section -->
-       
-        <section class="gallery-container">
-            <div class="gallery-item">
-                <img src="./assets/img1.jpg" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="./assets/img2.jpg" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="./assets/img3.jpg" alt="Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="./assets/img7.jpg" alt="Image 4">
-            </div>
-            <div class="gallery-item">
-                <img src="./assets/img4.jpg" alt="Image 5">
-            </div>
-            <div class="gallery-item">
-                <img src="./assets/img5.jpg" alt="Image 6">
-            </div>
-        </section>
-        <h2>TEMPLE VIDEOS</h2>
-        
-        <section class="gallery-container">
-            <div class="gallery-item video-item">
-                <video controls>
-                    <source src="./assets/video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item video-item">
-                <video controls>
-                    <source src="./assets/video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item video-item">
-                <video controls>
-                    <source src="./assets/video3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="gallery-item video-item">
-                <video controls>
-                    <source src="./assets/video4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-    </div>
-    
-<footer>
-    <div class="footer-container">
-      <!-- Logo Section -->
-      <div class="footer-logo">
-        <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" class="logo">
-      </div>
-      
-      <!-- Links Section -->
-      <div class="footer-links">
+        <div class="elem">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./seva.html">Seva List</a></li>
+            <li><a href="./committee.html">committee</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./event.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-menu">
+          <i class="fa-solid fa-bars open-icon"></i>
+          <i class="fa-solid fa-xmark close-icon"></i>
+        </div>
+        <div class="nav-contact">
+          <button class="btn1">
+            <a href="./donate.html"
+              ><i class="fa-solid fa-phone"></i> contact</a
+            >
+          </button>
+          <button><a href="./donate.html">Donate Now</a></button>
+        </div>
+      </nav>
+      <div class="mob-elem">
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="./seva.html">Seva List</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./committee.html">committee</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./event.html">Events</a></li>
         </ul>
       </div>
+    </header>
+    <div class="container">
+      <h2>TEMPLE PHOTOS</h2>
+
+      <!-- Temple Photos Section -->
+      <section class="gallery-container" id="gallery">
+        <!-- Images will be injected here -->
+      </section>
+
+      <script>
+        async function loadGallery() {
+          const query = `
+      query {
+        galleries {
+          Images {
+            url
+            name
+          }
+          title
+        }
+      }
+    `;
+
+          try {
+            const response = await fetch("http://localhost:1337/graphql", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ query }),
+            });
+
+            const result = await response.json();
+            console.log("GraphQL Result:", result);
+
+            const galleries = result?.data?.galleries;
+            const galleryContainer =
+              document.querySelector(".gallery-container");
+
+            if (!Array.isArray(galleries)) {
+              console.warn(
+                "galleries is not an array. Actual value:",
+                galleries
+              );
+              return;
+            }
+
+            if (!galleryContainer) {
+              console.error("No container with ID 'gallery' found in HTML");
+              return;
+            }
+
+            galleries.forEach((item) => {
+              const image = item.Images;
+
+              if (image && image.url) {
+                const imageUrl = new URL(image.url, "http://localhost:1337/")
+                  .href;
+                const altText = image.name;
+
+                const div = document.createElement("div");
+                div.classList.add("gallery-item");
+
+                const imgElement = document.createElement("img");
+                imgElement.src = imageUrl;
+                imgElement.alt = altText;
+
+                div.appendChild(imgElement);
+                galleryContainer.appendChild(div);
+              }
+            });
+          } catch (err) {
+            console.error("Failed to load gallery:", err);
+          }
+        }
+
+        loadGallery();
+      </script>
+
+      <h2>TEMPLE VIDEOS</h2>
+
+      <section class="gallery-container">
+        <div class="gallery-item video-item">
+          <video controls>
+            <source src="./assets/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-item video-item">
+          <video controls>
+            <source src="./assets/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-item video-item">
+          <video controls>
+            <source src="./assets/video3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery-item video-item">
+          <video controls>
+            <source src="./assets/video4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
     </div>
-    
-    <!-- Social Media Icons Section -->
-    <div class="social-icons">
+
+    <footer>
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+          <img src="./assets/VIshnugopalaLogoNew.png" alt="Logo" class="logo" />
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="./seva.html">Seva List</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social Media Icons Section -->
+      <div class="social-icons">
         <a href="./coming-soon.html"><i class="fa-brands fa-instagram"></i></a>
         <a href="./coming-soon.html"><i class="fa-brands fa-facebook"></i></a>
         <a href="./coming-soon.html"><i class="fa-brands fa-youtube"></i></a>
-        <a href="./coming-soon.html"><i class="fa-brands fa-square-x-twitter"></i></a>
-    </div>
-    
-    <!-- Copyright Section -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 All Rights Reserved. Developed by 21SOP03 Team</p>
-    </div>
-  </footer>
-</body>
-<script src="./index.js"></script>
+        <a href="./coming-soon.html"
+          ><i class="fa-brands fa-square-x-twitter"></i
+        ></a>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 All Rights Reserved. Developed by 21SOP03 Team</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
 </html>

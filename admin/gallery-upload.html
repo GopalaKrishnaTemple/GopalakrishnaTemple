@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Image Upload - Gopala Krishna Temple</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 10px 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      header h1 {
+        color: #667eea;
+        margin-bottom: 8px;
+        font-size: 28px;
+      }
+
+      header p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .main-content {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+      }
+
+      .form-section {
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #667eea;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
+      }
+
+      input[type="text"],
+      input[type="file"],
+      textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        font-family: inherit;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="file"]:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .file-input-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .file-input-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        border: 2px dashed #667eea;
+        border-radius: 8px;
+        background: #f8f9ff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .file-input-label:hover {
+        background: #f0f2ff;
+        border-color: #764ba2;
+      }
+
+      .file-input-label.dragover {
+        background: #e8ecff;
+        border-color: #764ba2;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .file-input-icon {
+        font-size: 36px;
+        margin-right: 12px;
+      }
+
+      .file-input-text {
+        text-align: left;
+        display: inline-block;
+      }
+
+      .file-input-text strong {
+        display: block;
+        color: #667eea;
+        margin-bottom: 4px;
+      }
+
+      .file-input-text small {
+        display: block;
+        color: #999;
+        font-size: 12px;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .image-preview {
+        margin-top: 20px;
+      }
+
+      .preview-title {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+      }
+
+      .preview-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f5f5f5;
+        aspect-ratio: 1;
+      }
+
+      .preview-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .remove-btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: #ff4757;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
+
+      .preview-item:hover .remove-btn {
+        opacity: 1;
+      }
+
+      .remove-btn:hover {
+        background: #ff3838;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        opacity: 0.9;
+        transform: scale(1.02);
+      }
+
+      .btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        background: #f0f0f0;
+        color: #333;
+        border: 1px solid #ddd;
+      }
+
+      .btn-secondary:hover {
+        background: #e8e8e8;
+      }
+
+      .help-text {
+        font-size: 12px;
+        color: #999;
+        margin-top: 6px;
+      }
+
+      .success-message {
+        background: #2ed573;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: none;
+      }
+
+      .success-message.show {
+        display: block;
+        animation: slideIn 0.3s ease;
+      }
+
+      .error-message {
+        background: #ff4757;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: none;
+      }
+
+      .error-message.show {
+        display: block;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .info-box {
+        background: #f0f2ff;
+        border-left: 4px solid #667eea;
+        padding: 16px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .info-box strong {
+        color: #667eea;
+      }
+
+      footer {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        padding-bottom: 20px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-button">← Back to Dashboard</a>
+
+      <header>
+        <h1>🖼️ Gallery Image Upload</h1>
+        <p>Add new images to the temple gallery</p>
+      </header>
+
+      <div class="main-content">
+        <!-- Success/Error Messages -->
+        <div id="successMessage" class="success-message"></div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <!-- Info Box -->
+        <div class="info-box">
+          <strong>📌 Information:</strong> Upload high-quality images in JPG,
+          PNG, or WebP format. Recommended size: 1200x800px for optimal display.
+        </div>
+
+        <form id="galleryForm" enctype="multipart/form-data">
+          <!-- Gallery Title Section -->
+          <div class="form-section">
+            <h2 class="section-title">Gallery Entry Details</h2>
+
+            <div class="form-group">
+              <label for="galleryTitle">Gallery Title</label>
+              <input
+                type="text"
+                id="galleryTitle"
+                name="title"
+                placeholder="e.g., Temple Entrance, Festival Celebration"
+                required
+              />
+              <div class="help-text">
+                Give your gallery entry a descriptive title
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="galleryDescription">Description (Optional)</label>
+              <textarea
+                id="galleryDescription"
+                name="description"
+                placeholder="Add details about the images, events, or context..."
+              ></textarea>
+              <div class="help-text">
+                Provide context or details about the gallery collection
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Upload Section -->
+          <div class="form-section">
+            <h2 class="section-title">Upload Images</h2>
+
+            <div class="form-group">
+              <label
+                class="file-input-label"
+                id="fileInputLabel"
+                for="imageInput"
+              >
+                <div class="file-input-icon">📸</div>
+                <div class="file-input-text">
+                  <strong>Click to upload or drag and drop</strong>
+                  <small>SVG, PNG, JPG, GIF, WEBP (Max 10MB per file)</small>
+                </div>
+              </label>
+              <input
+                type="file"
+                id="imageInput"
+                name="images"
+                multiple
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <!-- Image Preview -->
+            <div class="image-preview" id="imagePreview"></div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="resetForm()"
+            >
+              Clear Form
+            </button>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Upload to Gallery
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <p>© 2025 Gopala Krishna Temple | Gallery Management</p>
+      </footer>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("imageInput");
+      const fileInputLabel = document.getElementById("fileInputLabel");
+      const imagePreview = document.getElementById("imagePreview");
+      const form = document.getElementById("galleryForm");
+      const successMessage = document.getElementById("successMessage");
+      const errorMessage = document.getElementById("errorMessage");
+
+      let selectedFiles = [];
+
+      // Drag and drop functionality
+      fileInputLabel.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        fileInputLabel.classList.add("dragover");
+      });
+
+      fileInputLabel.addEventListener("dragleave", () => {
+        fileInputLabel.classList.remove("dragover");
+      });
+
+      fileInputLabel.addEventListener("drop", (e) => {
+        e.preventDefault();
+        fileInputLabel.classList.remove("dragover");
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      fileInput.addEventListener("change", (e) => {
+        handleFiles(e.target.files);
+      });
+
+      function handleFiles(files) {
+        selectedFiles = Array.from(files).filter((file) =>
+          file.type.startsWith("image/")
+        );
+
+        if (selectedFiles.length === 0) {
+          showError("No valid image files selected");
+          return;
+        }
+
+        // Check file size (10MB max)
+        const maxSize = 10 * 1024 * 1024;
+        selectedFiles = selectedFiles.filter((file) => {
+          if (file.size > maxSize) {
+            showError(`${file.name} exceeds 10MB limit`);
+            return false;
+          }
+          return true;
+        });
+
+        if (selectedFiles.length > 0) {
+          displayPreviews();
+        }
+      }
+
+      function displayPreviews() {
+        imagePreview.innerHTML = "";
+
+        if (selectedFiles.length > 0) {
+          const previewTitle = document.createElement("div");
+          previewTitle.className = "preview-title";
+          previewTitle.textContent = `${selectedFiles.length} image(s) selected`;
+          imagePreview.appendChild(previewTitle);
+
+          const previewGrid = document.createElement("div");
+          previewGrid.className = "preview-grid";
+
+          selectedFiles.forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              const previewItem = document.createElement("div");
+              previewItem.className = "preview-item";
+
+              const img = document.createElement("img");
+              img.src = e.target.result;
+
+              const removeBtn = document.createElement("button");
+              removeBtn.className = "remove-btn";
+              removeBtn.textContent = "✕";
+              removeBtn.type = "button";
+              removeBtn.onclick = () => removeImage(index);
+
+              previewItem.appendChild(img);
+              previewItem.appendChild(removeBtn);
+              previewGrid.appendChild(previewItem);
+            };
+            reader.readAsDataURL(file);
+          });
+
+          imagePreview.appendChild(previewGrid);
+        }
+      }
+
+      function removeImage(index) {
+        selectedFiles.splice(index, 1);
+        displayPreviews();
+        if (selectedFiles.length === 0) {
+          fileInput.value = "";
+        }
+      }
+
+      function showError(message) {
+        errorMessage.textContent = "❌ " + message;
+        errorMessage.classList.add("show");
+        setTimeout(() => {
+          errorMessage.classList.remove("show");
+        }, 4000);
+      }
+
+      function showSuccess(message) {
+        successMessage.textContent = "✓ " + message;
+        successMessage.classList.add("show");
+        setTimeout(() => {
+          successMessage.classList.remove("show");
+        }, 4000);
+      }
+
+      function resetForm() {
+        form.reset();
+        fileInput.value = "";
+        selectedFiles = [];
+        imagePreview.innerHTML = "";
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const title = document.getElementById("galleryTitle").value;
+        const description = document.getElementById("galleryDescription").value;
+
+        if (!title.trim()) {
+          showError("Please enter a gallery title");
+          return;
+        }
+
+        if (selectedFiles.length === 0) {
+          showError("Please select at least one image");
+          return;
+        }
+
+        // Upload selected files and metadata to server endpoint that will
+        // save files to assets/ and update content/gallery.json.
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Preparing upload...";
+
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("description", description || "");
+
+        selectedFiles.forEach((file) => {
+          formData.append("images[]", file, file.name);
+        });
+
+        // Use XMLHttpRequest so we can show upload progress
+        const xhr = new XMLHttpRequest();
+        // Adjust endpoint to match your server implementation
+        xhr.open("POST", "/admin/upload-gallery", true);
+
+        xhr.upload.onprogress = (e) => {
+          if (e.lengthComputable) {
+            const percent = Math.round((e.loaded / e.total) * 100);
+            submitBtn.textContent = `Uploading... ${percent}%`;
+          } else {
+            submitBtn.textContent = "Uploading...";
+          }
+        };
+
+        xhr.onload = () => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Upload to Gallery";
+
+          if (xhr.status >= 200 && xhr.status < 300) {
+            let res;
+            try {
+              res = JSON.parse(xhr.responseText);
+            } catch (err) {
+              showError("Invalid server response");
+              return;
+            }
+
+            if (res && res.success) {
+              showSuccess(
+                res.message ||
+                  `Successfully uploaded ${selectedFiles.length} image(s)`
+              );
+              resetForm();
+            } else {
+              showError(res.message || "Upload failed");
+            }
+          } else {
+            showError(`Upload failed: ${xhr.status} ${xhr.statusText}`);
+          }
+        };
+
+        xhr.onerror = () => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Upload to Gallery";
+          showError("Upload error. Check network or server.");
+        };
+
+        xhr.send(formData);
+      });
+    </script>
+  </body>
+</html>

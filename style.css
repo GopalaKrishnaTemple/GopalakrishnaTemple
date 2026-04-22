@@ -366,7 +366,9 @@ nav .nav-contact .btn1 a {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transition for hover */
 }
 
 .cards .card .card-icon i {
@@ -1443,4 +1445,84 @@ button:focus {
 
 .lang-selector:hover .lang-dropdown {
   display: block;
+}
+
+/* Payment Details Styling */
+.payment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 20px;
+}
+
+.payment-details > div {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #6a3a6e;
+}
+
+.payment-details h3 {
+  font-size: 24px;
+  color: rgb(202, 66, 66);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.banking-info .bank-card p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.5;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.banking-info .bank-card p:last-child {
+  border-bottom: none;
+}
+
+.banking-info .bank-card strong {
+  color: #6a3a6e;
+}
+
+.upi-scanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.qr-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border: 2px solid #6a3a6e;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+}
+
+.qr-container p {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
 }
